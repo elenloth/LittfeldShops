@@ -21,6 +21,15 @@ ratioslen = len(ratios)
 pages = [39, 40, 42, 43, 44, 45, 45, 46, 46, 47, 47, 49, 50, 50, 51, 57]
 pageslen = len(pages)
 
+# Determine current date
+days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+months = ["January", "February", "March", "April", "May", "June", "July", "August",
+          "September", "October", "November", "December"] 
+
+print("Today's day is a", days[random.randint(0,6)], "in" , months[random.randint(0,11)])
+
+# Determine which shops are present
+
 if shopslen == ratioslen and shopslen == pageslen:
 
   print ("Today in Littfeld, the following shop wagons are present:") 
@@ -29,3 +38,8 @@ if shopslen == ratioslen and shopslen == pageslen:
     if presence < ratios[x]:
       print(shops[x], "is present on page", pages[x])
       
+
+# To Do:
+# Remove the 100 places/always print them at the top
+# Figure out how to notate the ones that are Only Sometimes
+# Is there an easier matrix way to declare my arrays? this sucks and is likely to have slipping errors
